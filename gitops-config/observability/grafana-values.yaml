@@ -27,3 +27,8 @@ datasources:
         type: tempo
         url: http://tempo.observability.svc.cluster.local
         access: proxy
+
+      - name: Loki
+        type: loki
+        url: http://loki.observability.svc.cluster.local
+        access: proxy
