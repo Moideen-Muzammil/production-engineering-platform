@@ -7,7 +7,7 @@ spec:
   project: default
 
   sources:
-    - repoURL: https://grafana.github.io/helm-charts
+    - repoURL: https://grafana-community.github.io/helm-charts
       chart: grafana
       targetRevision: 10.5.15
       helm:
