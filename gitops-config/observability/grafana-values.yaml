@@ -12,3 +12,18 @@ resources:
 
 persistence:
   enabled: false
+
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://prometheus-server.observability.svc.cluster.local
+        access: proxy
+        isDefault: true
+
+      - name: Tempo
+        type: tempo
+        url: http://tempo.observability.svc.cluster.local
+        access: proxy
