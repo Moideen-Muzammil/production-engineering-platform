@@ -13,3 +13,17 @@ server:
 
 alertmanager:
   enabled: true
+
+
+extraScrapeConfigs: |
+  - job_name: 'otel-demo'
+    kubernetes_sd_configs:
+      - role: endpoints
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_namespace]
+        action: keep
+        regex: otel-demo
+      - source_labels: [__meta_kubernetes_endpoint_port_name]
+        action: keep
+        regex: prometheus
+
