@@ -40,6 +40,14 @@ ports:
     servicePort: 8888
     protocol: TCP
 
+
+  prometheus:
+    enabled: true
+    containerPort: 9464
+    servicePort: 9464
+    protocol: TCP
+
+
   jaeger-compact:
     enabled: false
   jaeger-thrift:
@@ -75,7 +83,9 @@ alternateConfig:
       tls:
         insecure: true
 
-  
+  prometheus:
+    endpoint: ${env:MY_POD_IP}:9464
+
   service:
     telemetry:
       metrics:
@@ -93,4 +103,10 @@ alternateConfig:
         receivers: [otlp]
         processors: [memory_limiter, batch]
         exporters: [otlp]
+      
+
+      metrics:
+        receivers: [otlp]
+        processors: [memory_limiter, batch]
+        exporters: [prometheus]
 
