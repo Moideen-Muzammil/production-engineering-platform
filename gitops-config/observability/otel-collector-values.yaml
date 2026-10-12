@@ -83,8 +83,8 @@ alternateConfig:
       tls:
         insecure: true
 
-  prometheus:
-    endpoint: ${env:MY_POD_IP}:9464
+    prometheus:
+      endpoint: ${env:MY_POD_IP}:9464
 
   service:
     telemetry:

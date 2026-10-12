@@ -1,3 +1,9 @@
+chunksCache:
+  enabled: false
+
+resultsCache:
+  enabled: false
+
 deploymentMode: Monolithic
 
 singleBinary:
