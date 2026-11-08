@@ -8,6 +8,7 @@ resource "google_compute_subnetwork" "gke" {
   ip_cidr_range = "10.10.0.0/20"
   region        = "asia-south1"
   network       = google_compute_network.vpc.id
+  private_ip_google_access = true
 
   secondary_ip_range {
     range_name    = "gke-pods"

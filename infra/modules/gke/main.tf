@@ -11,7 +11,8 @@ resource "google_project_iam_member" "gke_nodes" {
 
 resource "google_container_cluster" "gke" {
   name     = "production-platform-gke"
-  location = "asia-south1"
+  location = "asia-south1-a"
+  deletion_protection = false
 
   release_channel {
   channel = "REGULAR"
@@ -38,18 +39,13 @@ resource "google_container_cluster" "gke" {
 
 resource "google_container_node_pool" "primary" {
   name     = "primary-node-pool"
-  location = "asia-south1"
+  location = "asia-south1-a"
   cluster  = google_container_cluster.gke.name
 
   node_count = 1
-  
-  autoscaling {
-  min_node_count = 1
-  max_node_count = 3
-  }
 
   node_config {
-    machine_type    = "e2-standard-2"
+    machine_type    = "e2-medium"
     service_account = google_service_account.gke_nodes.email
   }
 }

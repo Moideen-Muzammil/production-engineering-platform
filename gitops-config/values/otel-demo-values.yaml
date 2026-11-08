@@ -1,3 +1,4 @@
+
 default:
   envOverrides:
     - name: OTEL_COLLECTOR_NAME
@@ -17,3 +18,44 @@ grafana:
 
 opensearch:
   enabled: false
+
+components:
+  load-generator:
+    enabled: false
+
+  accounting:
+    resources:
+      requests:
+        memory: 64Mi
+      limits:
+        memory: 160Mi
+
+  ad:
+    resources:
+      requests:
+        memory: 128Mi
+      limits:
+        memory: 300Mi
+
+  checkout:
+    resources:
+      requests:
+        memory: 16Mi
+      limits:
+        memory: 32Mi
+
+  flagd:
+    resources:
+      requests:
+        memory: 32Mi
+      limits:
+        memory: 75Mi
+    sidecarContainers:
+      - name: flagd-ui
+        useDefault:
+          env: true
+        resources:
+          requests:
+            memory: 64Mi
+          limits:
+            memory: 250Mi
