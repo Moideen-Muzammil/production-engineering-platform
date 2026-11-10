@@ -45,7 +45,7 @@ resource "google_container_node_pool" "primary" {
   node_count = 1
 
   node_config {
-    machine_type    = "e2-medium"
+    machine_type    = "e2-standard-4"
     service_account = google_service_account.gke_nodes.email
   }
 }
