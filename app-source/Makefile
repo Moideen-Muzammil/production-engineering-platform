@@ -93,38 +93,38 @@ yamllint: install-yamllint
 checklicense:	$(ADDLICENSE)
 	@echo "Checking license headers..."
 	$(ADDLICENSE) -check -c "The OpenTelemetry Authors" -l apache -s=only -y "" \
-		-ignore node_modules/** \
-		-ignore .expo/** \
-		-ignore Pods/** \
+		-ignore "node_modules/**" \
+		-ignore ".expo/**" \
+		-ignore "Pods/**" \
 		-ignore ".chloggen/**" \
-		-ignore **/extras/** \
-		-ignore **/vendor/** \
-		-ignore **/.venv/** \
-		-ignore **/dist/** \
-		-ignore **/build/** \
-		-ignore **/*_pb2.py \
-		-ignore **/*_pb2_grpc.py \
-		-ignore **/genproto/** \
-		-ignore **/protos/*.ts \
+		-ignore "**/extras/**" \
+		-ignore "**/vendor/**" \
+		-ignore "**/.venv/**" \
+		-ignore "**/dist/**" \
+		-ignore "**/build/**" \
+		-ignore "**/*_pb2.py" \
+		-ignore "**/*_pb2_grpc.py" \
+		-ignore "**/genproto/**" \
+		-ignore "**/protos/*.ts" \
 		.
 
 .PHONY: addlicense
 addlicense:	$(ADDLICENSE)
 	@echo "Adding license headers..."
 	$(ADDLICENSE) -c "The OpenTelemetry Authors" -l apache -s=only -y "" \
-		-ignore node_modules/** \
-		-ignore .expo/** \
-		-ignore Pods/** \
+		-ignore "node_modules/**" \
+		-ignore ".expo/**" \
+		-ignore "Pods/**" \
 		-ignore ".chloggen/**" \
-		-ignore **/extras/** \
-		-ignore **/vendor/** \
-		-ignore **/.venv/** \
-		-ignore **/dist/** \
-		-ignore **/build/** \
-		-ignore **/*_pb2.py \
-		-ignore **/*_pb2_grpc.py \
-		-ignore **/genproto/** \
-		-ignore **/protos/*.ts \
+		-ignore "**/extras/**" \
+		-ignore "**/vendor/**" \
+		-ignore "**/.venv/**" \
+		-ignore "**/dist/**" \
+		-ignore "**/build/**" \
+		-ignore "**/*_pb2.py" \
+		-ignore "**/*_pb2_grpc.py" \
+		-ignore "**/genproto/**" \
+		-ignore "**/protos/*.ts" \
 		.
 
 .PHONY: checklinks
