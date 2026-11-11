@@ -4,3 +4,7 @@
 *.tfstate.*
 *.tfvars
 *.tfvars.json
+# Environment variables
+.env
+.env.*
+!.env.example
