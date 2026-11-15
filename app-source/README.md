@@ -138,7 +138,6 @@ For more information about the emeritus role, see the [community repository](htt
 [Bronto]: https://docs.bronto.io/getting-started/otel-demo
 [Causely]: https://github.com/causely-oss/otel-demo
 [ClickStack]: https://github.com/ClickHouse/opentelemetry-demo
-[Coralogix]: https://coralogix.com/blog/configure-otel-demo-send-telemetry-data-coralogix
 [Dash0]: https://github.com/dash0hq/opentelemetry-demo
 [Datadog]: https://docs.datadoghq.com/opentelemetry/guide/otel_demo_to_datadog
 [Dynatrace]: https://www.dynatrace.com/news/blog/opentelemetry-demo-application-with-dynatrace/
