@@ -33,7 +33,9 @@ jobs:
         run: make install-tools
       
       - name: Install Lychee
-        uses: taiki-e/install-action@lychee
+        uses: taiki-e/install-action@v2
+        with:
+          tool: lychee
 
       - name: Run source checks
         working-directory: app-source
