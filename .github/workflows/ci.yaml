@@ -31,6 +31,9 @@ jobs:
       - name: Install validation tools
         working-directory: app-source
         run: make install-tools
+      
+      - name: Install Lychee
+        uses: taiki-e/install-action@lychee
 
       - name: Run source checks
         working-directory: app-source
