@@ -22,6 +22,12 @@
 
 # Build artifacts
 bin/
+!/src/
+!/src/flagd-ui/
+!/src/flagd-ui/rel/
+!/src/flagd-ui/rel/overlays/
+!/src/flagd-ui/rel/overlays/bin/
+!/src/flagd-ui/rel/overlays/bin/**
 obj/
 .gradle/
 .nb-gradle
